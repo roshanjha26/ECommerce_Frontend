@@ -11,6 +11,7 @@ const App = () => {
           <Route path="/sign-up" element={<SignupPage />} />
         </Routes>
       </BrowserRouter>
+      Home
     </div>
   );
 };
