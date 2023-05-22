@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../../styles/styles";
+import ProductDeatailsCard from "../ProductDetailsCard/ProductDeatailsCard.jsx";
+
 import {
   AiFillHeart,
   AiFillStar,
@@ -110,6 +112,8 @@ const ProductCards = ({ data }) => {
             color="#333"
             title="Add To Cart"
           />
+
+          {open ? <ProductDeatailsCard setOpen={setOpen} data={data} /> : null}
         </div>
       </div>
     </>
