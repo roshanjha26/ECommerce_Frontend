@@ -21,6 +21,8 @@ const Header = ({ activeHeading }) => {
   const [searchData, setSearchData] = useState(null);
   const [active, setActive] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
+  const [openWishList, setOpenWishList] = useState(false);
 
   const handlerSearchChange = (e) => {
     const term = e.target.value;
@@ -169,6 +171,7 @@ const Header = ({ activeHeading }) => {
                 )}
               </div>
             </div>
+            {/* wish List */}
           </div>
         </div>
       </div>
