@@ -7,10 +7,10 @@ const SignupPage = () => {
   const { isAuthenticated } = useSelector((state) => state.user);
   const navigate = useNavigate();
   useEffect(() => {
-    if (!isAuthenticated === true) {
+    if (isAuthenticated === true) {
       navigate("/");
     }
-  }, []);
+  }, [isAuthenticated, navigate]);
   return (
     <div>
       <Signup />

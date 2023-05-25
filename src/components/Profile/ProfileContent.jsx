@@ -47,22 +47,22 @@ const ProfileContent = ({ active }) => {
           <br />
           <div className="w-full px-5">
             <form onSubmit={handleSubmit} aria-aria-required={true}>
-              <div className="w-full flex pb-3">
-                <div className="w-[50%]">
+              <div className="w-full 800px:flex block pb-3">
+                <div className="w-[100%] 800px:w-[50%]">
                   <label className="block pb-2">Full Name</label>
                   <input
                     type="text"
-                    className={`${styles.input} !w-[95%] `}
+                    className={`${styles.input} !w-[95%] mb-1 800px:mb-0 `}
                     required
                     value={name}
                     onChange={() => setName(setName)}
                   />
                 </div>
-                <div className="w-[50%]">
+                <div className="w-[100%] 800px:w-[50%]">
                   <label className="block pb-2">Email</label>
                   <input
                     type="email"
-                    className={`${styles.input} !w-[95%] `}
+                    className={`${styles.input} !w-[95%] mb-1 800px:mb-0`}
                     required
                     value={email}
                     onChange={() => setEmail(setEmail)}
@@ -70,22 +70,22 @@ const ProfileContent = ({ active }) => {
                 </div>
               </div>
 
-              <div className="w-full flex pb-3">
-                <div className="w-[50%]">
+              <div className="w-full 800px:flex block pb-3">
+                <div className="w-[100%] 800px:w-[50%]">
                   <label className="block pb-2">Phone Number</label>
                   <input
                     type="number"
-                    className={`${styles.input} !w-[95%] `}
+                    className={`${styles.input} !w-[95%] mb-1 800px:mb-0`}
                     required
                     value={phonenumber}
                     onChange={() => setPhonenumber(setPhonenumber)}
                   />
                 </div>
-                <div className="w-[50%]">
+                <div className="w-[100%] 800px:w-[50%]">
                   <label className="block pb-2">Zip Code</label>
                   <input
                     type="number"
-                    className={`${styles.input} !w-[95%] `}
+                    className={`${styles.input} !w-[95%] mb-1 800px:mb-0 `}
                     required
                     value={zipCode}
                     onChange={() => setZipCode(setZipCode)}
@@ -93,12 +93,12 @@ const ProfileContent = ({ active }) => {
                 </div>
               </div>
 
-              <div className="w-full flex pb-3">
+              <div className="w-full 800px:flex block pb-3">
                 <div className="w-[50%]">
                   <label className="block pb-2">Address 1</label>
                   <input
                     type="text"
-                    className={`${styles.input} !w-[95%] `}
+                    className={`${styles.input} !w-[95%] mb-1 800px:mb-0`}
                     required
                     value={address1}
                     onChange={() => setAddress1(setAddress1)}
@@ -108,7 +108,7 @@ const ProfileContent = ({ active }) => {
                   <label className="block pb-2">Address 2</label>
                   <input
                     type="text"
-                    className={`${styles.input} !w-[95%] `}
+                    className={`${styles.input} !w-[95%] mb-1 800px:mb-0 `}
                     required
                     value={address2}
                     onChange={() => setAddress2(setAddress2)}
@@ -158,6 +158,14 @@ const ProfileContent = ({ active }) => {
         <>
           <div>
             <PaymentMethod />
+          </div>
+        </>
+      )}
+      {/* user Address Page */}
+      {active === 7 && (
+        <>
+          <div>
+            <Address />
           </div>
         </>
       )}
@@ -443,6 +451,36 @@ const PaymentMethod = () => {
         <div className="pl-8 flex items-center">
           <h5>1234 **** ****</h5>
           <h5 className="pl-6">08/2022</h5>
+        </div>
+        <div className="min-w-[10%] flex items-center justify-between pl-8">
+          <AiOutlineDelete size={25} className="cursor-pointer" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Address = () => {
+  return (
+    <div className="w-full px-5">
+      <div className="flex w-full items-center justify-between">
+        <h1 className="text-[25px] font-[600] text-[#000000ba] pb-2">
+          My Address
+        </h1>
+        <div className={`${styles.button} !rounded-md`}>
+          <span className="text-[#fff]">Add New</span>
+        </div>
+      </div>
+      <br />
+      <div className="w-full bg-white h-[70px] rounded-[4px] flex items-center px-3 shadow justify-between pr-10">
+        <div className="flex items-center">
+          <h5 className="pl-5 font-[600]"> Address</h5>
+        </div>
+        <div className="pl-8 flex items-center">
+          <h6>
+            Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016
+          </h6>
+          <h6>(202)555-0177</h6>
         </div>
         <div className="min-w-[10%] flex items-center justify-between pl-8">
           <AiOutlineDelete size={25} className="cursor-pointer" />
