@@ -3,11 +3,12 @@ import SignupPage from "./pages/SignupPage";
 import ActivationPage from "./pages/ActivationPage";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
-import BestSellingPage from "./pages/BestSellingPage.jsx";
-import EventsPage from "./pages/EventsPage.jsx";
-import FAQPage from "./pages/FAQPage.jsx";
-import ProductDetailsPage from "./pages/ProductDetailsPage.jsx";
-import ProfilePage from "./pages/ProfilePage.jsx";
+import BestSellingPage from "./pages/BestSellingPage";
+import EventsPage from "./pages/EventsPage";
+import FAQPage from "./pages/FAQPage";
+import ProductDetailsPage from "./pages/ProductDetailsPage";
+import ProfilePage from "./pages/ProfilePage";
+import ShopCreatePage from "./pages/ShopCreatePage";
 
 export {
   LoginPage,
@@ -20,4 +21,5 @@ export {
   FAQPage,
   ProductDetailsPage,
   ProfilePage,
+  ShopCreatePage,
 };
